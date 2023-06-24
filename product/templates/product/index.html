@@ -1,0 +1,20 @@
+{% extends "product/template.html" %}
+
+{% block content %}
+<div class="containe m-0">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-4">
+            <div class="card m-2 p-2" style="background-color: rgb(249, 237, 223);">
+                <img src="..." class="card-img-top" alt="img">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.short_description }}<a href="#" class="card-link" role="button">Read More...</a></p>
+                </div>
+                <a href="#" class="btn btn-warning">Add To Cart</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

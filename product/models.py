@@ -27,7 +27,7 @@ class ProductDetail(models.Model):
     is_sold = models.BooleanField(default=False)
     
     def __str__(self):
-        return f"{self.serial_number} - {self.cost} - {self.is_sold}"
+        return f"{self.product_id} - {self.serial_number} - {self.cost} - {self.is_sold}"
 
 
 class ProductImage(models.Model):
